@@ -1,51 +1,78 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href=".\output.css">
+    <link rel="stylesheet" href="./output.css">
 </head>
+<style>
+    .zoom-effect {
+  display: inline-block; 
+  transition: transform 0.3s ease;
+}
 
+.zoom-effect:hover {
+  transform: scale(1.1); 
+}
+</style>
 <body>
-    <nav class="bg-blue-300 fixed w-full">
+    <nav class="bg-neutral-950 fixed w-full">
         <div class="flex justify-between mx-10 mt-1.5 items-center">
-            <a href="#HOME"><img src="image-removebg-preview.png" alt="" class="h-15 mb-2 zoom-effect"></a>
+            <a href="#HOME"><img src="../assets/logo-removebg-preview.png" alt="" class="h-15 mb-2 zoom-effect"></a>
             <ul class="flex justify-between w-70">
-                <li><a href="#HOME" class="hover:bg-amber-200 rounded-full p-3"> HOME</a></li>
-                <li><a href="#ABOUTME" class="hover:bg-amber-200 rounded-full p-3"> ABOUT ME</a></li>
-                <li><a href="#MYWORK" class="hover:bg-amber-200 rounded-full p-3">MY WORK</a></li>
+                <li><a href="#HOME" class="hover:bg-orange-300 rounded-full p-3 text-amber-50 hover:text-black"> HOME</a></li>
+                <li><a href="#ABOUTME" class="hover:bg-orange-300 rounded-full p-3 text-amber-50 hover:text-black"> ABOUT ME</a></li>
+                <li><a href="#MYWORK" class="hover:bg-orange-300 rounded-full p-3 text-amber-50 hover:text-bla">SERVICES</a></li>
             </ul>
         </div>
     </nav>
 
-    <main id="HOME" class="h-screen bg-cyan-300 flex justify-center items-center ">
-        <img src="image-removebg-preview.png" alt="" class="h-52 mr-10 hover:animate-bounce">
+    <main id="HOME" class="h-screen bg-yellow-100 flex justify-center items-center">
         <div>
-            <h1 class="text-6xl mb-4 ">WELCOME TO MY HOME</h1>
-            <p class="text-2xl mr-15 text-justify mb-6">THIS IS THE PORTFOLIO OF THE PROGRAMMER OF THIS YEAR</p>
+            <h1 class="text-l mb-4 font-serifs">NICE TO MEET YOU I'M</h1>
+            <p class="text-9xl mr-15 text-justify mb-6 font-extrabold font-serif">IVAN N. GOLIS</p>
             <h1><a href="#ABOUTME" class="bg-amber-400 rounded-full p-3 text-xl text-black hover:text-white zoom-effect">ABOUT
                     ME</a></h1>
         </div>
     </main>
 
-    <main id="ABOUTME" class="h-screen bg-amber-400 flex justify-center items-center ">
-        <img src="image-removebg-preview.png" alt="" class="h-52 mr-10">
+    <main id="ABOUTME" class="h-screen bg-stone-300 flex justify-center items-center ">
+        <img src="../assets/pfp-maker (1).png" alt="" class="h-60 mr-10 zoom-effect">
         <div>
-            <h1 class="text-6xl ">IVAN N. GOLIS</h1>
-            <p class="text-2xl mr-15 text-justify">An “about me” section should include several elements: Your
-                professional title: Your “about me” section
-                should describe who you are as a professional. Including your current job title . It quickly informs the
-                reader of your level of professional experience.</p>
+            <h1 class="text-l mb-4 font-serif">MY NAME IS IVAN</h1>
+            <p class="text-6xl mr-15 text-justify mb-6 font-extrabold">I'm a Web Developer</p>
+            <div class="flex justify-between w-30">
+                <a href="https://www.facebook.com/ivangolis76/" target="_blank">
+                    <img src="../assets/facebook-removebg-preview.png" alt="Facebook" class="h-10 zoom-effect">
+                </a>
+                <a href="https://www.instagram.com/ivanbritz_/" target="_blank">
+                    <img src="../assets/instagram-removebg-preview.png" alt="Instagram" class="h-10 zoom-effect">
+                </a>
+
+                <a href="https://github.com/IvanBritz" target="_blank">
+                    <img src="../assets/image-removebg-preview.png" alt="Instagram" class="h-10 zoom-effect">
+                </a>
+            </div>
         </div>
     </main>
 
-    <main id="MYWORK" class="h-screen bg-blue-700 flex justify-center items-center ">
-        <h1 class="text-7xl mb-4 text-white">MY WORK</h1>
+    <main id="MYWORK" class="h-screen bg-stone-500 flex justify-center items-center">
+            
+        <div class="mx-10">
+            <h1 class="text-4xl font-bold text-amber-50 mb-7">Services</h1>
+            <div class="flex justify-between">
+                <div >
+                    <h1 class="text-2xl text-amber-50 font-bold">WEB DESIGN</h1>
+                    <p class="text-amber-50 text-xl">Customer-focused, creating mobile-friendly responsively designed experiences that deliver tangible business results, ING helps brands navigate any and all facets of the digital landscape.</p>
+                </div>
+                <div >
+                    <h1 class="text-2xl text-amber-50 font-bold">APPLICATION DEVELOPMENT</h1>
+                    <p class="text-amber-50 text-xl">Customer-focused, creating mobile-friendly responsively designed experiences that deliver tangible business results, ING helps brands navigate any and all facets of the digital landscape.</p>
+                </div>
+            </div>
+        </div>
 
     </main>
 </body>
-
 </html>
