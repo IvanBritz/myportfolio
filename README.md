@@ -61,8 +61,8 @@ def main():
     keys = {
         "left": False,
         "right": False,
-        "up": False,
-        "down": False,
+        "rot_up": False,
+        "rot_down": False,
         "rot_left": False,
         "rot_right": False,
         "scale_in": False,
@@ -77,8 +77,8 @@ def main():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_a: keys["left"] = True
                 if event.key == pygame.K_d: keys["right"] = True
-                if event.key == pygame.K_w: keys["up"] = True
-                if event.key == pygame.K_s: keys["down"] = True
+                if event.key == pygame.K_w: keys["rot_up"] = True
+                if event.key == pygame.K_s: keys["rot_down"] = True
                 if event.key == pygame.K_q: keys["rot_left"] = True
                 if event.key == pygame.K_e: keys["rot_right"] = True
                 if event.key == pygame.K_z: keys["scale_in"] = True
@@ -87,8 +87,8 @@ def main():
             if event.type == pygame.KEYUP:
                 if event.key == pygame.K_a: keys["left"] = False
                 if event.key == pygame.K_d: keys["right"] = False
-                if event.key == pygame.K_w: keys["up"] = False
-                if event.key == pygame.K_s: keys["down"] = False
+                if event.key == pygame.K_w: keys["rot_up"] = False
+                if event.key == pygame.K_s: keys["rot_down"] = False
                 if event.key == pygame.K_q: keys["rot_left"] = False
                 if event.key == pygame.K_e: keys["rot_right"] = False
                 if event.key == pygame.K_z: keys["scale_in"] = False
@@ -97,10 +97,10 @@ def main():
         # Apply transformations smoothly
         if keys["left"]: glTranslatef(-0.05, 0, 0)
         if keys["right"]: glTranslatef(0.05, 0, 0)
-        if keys["up"]: glTranslatef(0, 0.05, 0)
-        if keys["down"]: glTranslatef(0, -0.05, 0)
-        if keys["rot_left"]: glRotatef(2, 0, 1, 0)
-        if keys["rot_right"]: glRotatef(-2, 0, 1, 0)
+        if keys["rot_up"]: glRotatef(2, 1, 0, 0)   # rotate upward
+        if keys["rot_down"]: glRotatef(-2, 1, 0, 0) # rotate downward
+        if keys["rot_left"]: glRotatef(2, 0, 1, 0) # rotate left
+        if keys["rot_right"]: glRotatef(-2, 0, 1, 0) # rotate right
         if keys["scale_in"]: glScalef(0.99, 0.99, 0.99)
         if keys["scale_out"]: glScalef(1.01, 1.01, 1.01)
 
