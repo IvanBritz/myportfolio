@@ -1,51 +1,88 @@
-Selected Film: Inception (2010, directed by Christopher Nolan)
-
+Movie-to-Game Adaptation: Interstellar (2014)
 1. Story Elements (25 points)
 
-Premise: A skilled thief enters dreams to steal secrets but is given a chance at redemption if he can implant an idea instead of stealing one.
+Premise: A group of astronauts travels through a wormhole to find a new habitable planet for humanity, as Earth is dying from environmental collapse.
 
-Backstory: Dom Cobb lost his wife, Mal, and is on the run from authorities. His only way home to his children is to succeed in the “inception” mission.
+Backstory: Humanity faces extinction due to global crop failures and dust storms. Former NASA pilot Cooper is recruited for a last-hope mission.
 
-Synopsis: Cobb assembles a team of dream manipulators to plant an idea into a business heir’s mind through layered dreams.
+Synopsis: Players (as Cooper or custom crew) must explore different planets across galaxies, manage limited resources, survive harsh environments, and make moral choices to save humanity.
 
-Theme: Reality vs. illusion; guilt and redemption; manipulation of perception.
+Theme: Love, sacrifice, hope, survival, and the clash between human instincts and scientific reasoning.
 
-Setting: Shifting dream worlds (cities folding, zero-gravity hotels, snowy fortresses) and real-world locations (Paris, Tokyo, Los Angeles).
+Setting: Earth (dying farmland), NASA base, outer space, wormhole, different planets (water world, ice world, desert world), and a black hole environment.
 
-Plot: Player must navigate missions inside layered dreams, balancing time, environment manipulation, and survival while preventing the subconscious “projections” from eliminating them.
+Plot (Game Version):
 
-Balancing Conflict: Internal (Cobb’s grief and guilt) vs. External (mission threats, dream collapses, enemy projections).
+Survive on Earth (resource gathering, early dust storms).
 
-Shifting Focus: Between action combat, stealth infiltration, and puzzle-solving to stabilize dream worlds.
+Join NASA mission → prepare spacecraft & crew.
 
-Suspension of Disbelief: The game emphasizes the science-fiction rules of dream-sharing while maintaining player immersion in surreal but logical environments.
+Travel through the wormhole.
 
-Realism: Weapons, physics, and human emotions feel grounded, but dream manipulation introduces fantastical abilities.
+Explore multiple hostile planets with unique gameplay mechanics (water planet – flood survival, ice planet – navigation, desert planet – resource scarcity).
+
+Enter the black hole (time-dilation puzzle mechanics).
+
+Return with critical data to save humanity.
+
+Balancing Conflict: Players face external conflicts (hostile environments, limited supplies, time constraints) and internal conflicts (family ties, moral decisions).
+
+Shifting Focus: From exploration → survival → puzzle-solving → emotional story choices.
+
+Suspension of Disbelief: Wormholes, relativity, and black hole science are explained realistically but still allow game-like mechanics.
+
+Realism: Accurate physics (gravity/time effects), survival mechanics (oxygen, fuel, food), mixed with cinematic storytelling.
 
 2. Characters (25 points)
 
-Hero / Protagonist: Dom Cobb – skilled extractor, seeking redemption.
+Hero / Protagonist:
 
-Shadow (Antagonist): Mal (Cobb’s projection of his wife), representing guilt and sabotage.
+Joseph Cooper – skilled pilot and loving father determined to save humanity and return to his children.
 
-Mentor: Miles (Cobb’s father-in-law, provides wisdom and guidance).
+Shadow (Antagonist):
 
-Ally: Arthur (planner and strategist), Ariadne (architect of dreams), Eames (forger/shapeshifter), Yusuf (chemist).
+Dr. Mann – betrays the mission out of fear and selfishness, representing human weakness.
 
-Guardian: Fischer’s subconscious projections (forces that resist intrusion).
+Mentor:
 
-Trickster: Eames, with his humor and impersonation abilities.
+Professor Brand (Michael Caine) – guides the team with his scientific expertise and moral advice.
 
-Herald: Saito, who presents Cobb with the chance to clear his record.
+Ally:
+
+Amelia Brand – scientist and astronaut, supportive and driven by hope and love.
+
+TARS & CASE (AI robots) – provide comic relief, technical support, and combat assistance.
+
+Guardian:
+
+Harsh environments of space and planets – testing survival at every turn.
+
+Trickster:
+
+TARS – provides humor and sarcasm but also creative problem-solving.
+
+Herald:
+
+NASA’s mission call, offering Cooper the chance to save his family and humanity.
 
 Transformational Characters:
 
-Fischer – from resistant to accepting the implanted idea.
+Cooper – grows from a reluctant farmer into a selfless savior.
 
-Cobb – from guilt-driven to accepting reality and moving on.
+Amelia Brand – evolves from a scientist following orders to one led by love and hope.
 
-Mistaken Characters: Mal – appears real but is only a projection of Cobb’s guilt.
+Mistaken Characters:
 
-Exaggerated Characters: Projections – exaggerated hostile enemies of the subconscious.
+Dr. Mann – believed to be humanity’s best hope, but becomes a dangerous liability.
 
-Supporting Characters: Security projections, dream civilians, Cobb’s children.
+Exaggerated Characters:
+
+The forces of nature (waves, ice storms, black hole) – heightened to challenge players dramatically.
+
+Supporting Characters:
+
+Murphy Cooper (Coop’s daughter, critical to solving the equation).
+
+NASA staff and minor astronauts.
+
+✅ This adaptation could be a story-driven survival exploration game similar to No Man’s Sky + The Last of Us style of emotional storytelling.
