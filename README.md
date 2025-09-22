@@ -25,7 +25,7 @@ triangles = [
     [3, 2, 5], [3, 5, 6]   # Bottom face
 ]
 
-# Colors for each pair of triangles
+# Colors for each face
 colors = [
     (1, 0, 0),   # Red
     (0, 1, 0),   # Green
@@ -38,7 +38,7 @@ colors = [
 def draw_cube():
     glBegin(GL_TRIANGLES)
     for i, tri in enumerate(triangles):
-        glColor3fv(colors[i // 2])  # same color for each face (2 triangles)
+        glColor3fv(colors[i // 2])  # same color per face (2 triangles)
         for vertex in tri:
             glVertex3fv(vertices[vertex])
     glEnd()
@@ -55,35 +55,61 @@ def main():
     glScalef(0.7, 0.7, 0.7)      # scale down the cube
 
     clock = pygame.time.Clock()
+    running = True
 
-    while True:
+    # Track keys held down
+    keys = {
+        "left": False,
+        "right": False,
+        "up": False,
+        "down": False,
+        "rot_left": False,
+        "rot_right": False,
+        "scale_in": False,
+        "scale_out": False
+    }
+
+    while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                pygame.quit()
-                return
+                running = False
 
             if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_a:  # Move left
-                    glTranslatef(-0.2, 0, 0)
-                if event.key == pygame.K_d:  # Move right
-                    glTranslatef(0.2, 0, 0)
-                if event.key == pygame.K_w:  # Move up
-                    glTranslatef(0, 0.2, 0)
-                if event.key == pygame.K_s:  # Move down
-                    glTranslatef(0, -0.2, 0)
-                if event.key == pygame.K_q:  # Rotate left
-                    glRotatef(10, 0, 1, 0)
-                if event.key == pygame.K_e:  # Rotate right
-                    glRotatef(-10, 0, 1, 0)
-                if event.key == pygame.K_z:  # Scale smaller
-                    glScalef(0.9, 0.9, 0.9)
-                if event.key == pygame.K_x:  # Scale bigger
-                    glScalef(1.1, 1.1, 1.1)
+                if event.key == pygame.K_a: keys["left"] = True
+                if event.key == pygame.K_d: keys["right"] = True
+                if event.key == pygame.K_w: keys["up"] = True
+                if event.key == pygame.K_s: keys["down"] = True
+                if event.key == pygame.K_q: keys["rot_left"] = True
+                if event.key == pygame.K_e: keys["rot_right"] = True
+                if event.key == pygame.K_z: keys["scale_in"] = True
+                if event.key == pygame.K_x: keys["scale_out"] = True
+
+            if event.type == pygame.KEYUP:
+                if event.key == pygame.K_a: keys["left"] = False
+                if event.key == pygame.K_d: keys["right"] = False
+                if event.key == pygame.K_w: keys["up"] = False
+                if event.key == pygame.K_s: keys["down"] = False
+                if event.key == pygame.K_q: keys["rot_left"] = False
+                if event.key == pygame.K_e: keys["rot_right"] = False
+                if event.key == pygame.K_z: keys["scale_in"] = False
+                if event.key == pygame.K_x: keys["scale_out"] = False
+
+        # Apply transformations smoothly
+        if keys["left"]: glTranslatef(-0.05, 0, 0)
+        if keys["right"]: glTranslatef(0.05, 0, 0)
+        if keys["up"]: glTranslatef(0, 0.05, 0)
+        if keys["down"]: glTranslatef(0, -0.05, 0)
+        if keys["rot_left"]: glRotatef(2, 0, 1, 0)
+        if keys["rot_right"]: glRotatef(-2, 0, 1, 0)
+        if keys["scale_in"]: glScalef(0.99, 0.99, 0.99)
+        if keys["scale_out"]: glScalef(1.01, 1.01, 1.01)
 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
         draw_cube()
         pygame.display.flip()
-        clock.tick(30)
+        clock.tick(60)  # smooth 60 FPS
+
+    pygame.quit()
 
 if __name__ == "__main__":
     main()
