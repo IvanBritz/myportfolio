@@ -1,118 +1,51 @@
-import pygame
-from pygame.locals import *
-from OpenGL.GL import *
-from OpenGL.GLU import *
+Selected Film: Inception (2010, directed by Christopher Nolan)
 
-# Diamond vertices (top, bottom, and square middle)
-vertices = [
-    [0, 1, 0],    # 0 - Top
-    [0, -1, 0],   # 1 - Bottom
-    [1, 0, 1],    # 2 - Front-right
-    [-1, 0, 1],   # 3 - Front-left
-    [-1, 0, -1],  # 4 - Back-left
-    [1, 0, -1]    # 5 - Back-right
-]
+1. Story Elements (25 points)
 
-# Diamond faces (triangles)
-triangles = [
-    [0, 2, 3],  # Top front
-    [0, 3, 4],  # Top left
-    [0, 4, 5],  # Top back
-    [0, 5, 2],  # Top right
+Premise: A skilled thief enters dreams to steal secrets but is given a chance at redemption if he can implant an idea instead of stealing one.
 
-    [1, 3, 2],  # Bottom front
-    [1, 4, 3],  # Bottom left
-    [1, 5, 4],  # Bottom back
-    [1, 2, 5]   # Bottom right
-]
+Backstory: Dom Cobb lost his wife, Mal, and is on the run from authorities. His only way home to his children is to succeed in the “inception” mission.
 
-# Colors for each face
-colors = [
-    (1, 0, 0),   # Red
-    (0, 1, 0),   # Green
-    (0, 0, 1),   # Blue
-    (1, 1, 0),   # Yellow
-    (1, 0, 1),   # Magenta
-    (0, 1, 1),   # Cyan
-    (1, 0.5, 0), # Orange
-    (0.5, 0, 0.5) # Purple
-]
+Synopsis: Cobb assembles a team of dream manipulators to plant an idea into a business heir’s mind through layered dreams.
 
-def draw_diamond():
-    glBegin(GL_TRIANGLES)
-    for i, tri in enumerate(triangles):
-        glColor3fv(colors[i % len(colors)])  # assign color per face
-        for vertex in tri:
-            glVertex3fv(vertices[vertex])
-    glEnd()
+Theme: Reality vs. illusion; guilt and redemption; manipulation of perception.
 
-def main():
-    pygame.init()
-    display = (800, 600)
-    pygame.display.set_mode(display, DOUBLEBUF | OPENGL)
-    pygame.display.set_caption("3D Diamond - Lab Exercise")
+Setting: Shifting dream worlds (cities folding, zero-gravity hotels, snowy fortresses) and real-world locations (Paris, Tokyo, Los Angeles).
 
-    glEnable(GL_DEPTH_TEST)  # enable depth testing
-    gluPerspective(45, (display[0] / display[1]), 0.1, 50.0)
-    glTranslatef(0.0, 0.0, -7)   # move diamond backwards
-    glScalef(0.7, 0.7, 0.7)      # scale down the diamond
+Plot: Player must navigate missions inside layered dreams, balancing time, environment manipulation, and survival while preventing the subconscious “projections” from eliminating them.
 
-    clock = pygame.time.Clock()
-    running = True
+Balancing Conflict: Internal (Cobb’s grief and guilt) vs. External (mission threats, dream collapses, enemy projections).
 
-    # Track keys held down
-    keys = {
-        "left": False,
-        "right": False,
-        "rot_up": False,
-        "rot_down": False,
-        "rot_left": False,
-        "rot_right": False,
-        "scale_in": False,
-        "scale_out": False
-    }
+Shifting Focus: Between action combat, stealth infiltration, and puzzle-solving to stabilize dream worlds.
 
-    while running:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                running = False
+Suspension of Disbelief: The game emphasizes the science-fiction rules of dream-sharing while maintaining player immersion in surreal but logical environments.
 
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_a: keys["left"] = True
-                if event.key == pygame.K_d: keys["right"] = True
-                if event.key == pygame.K_w: keys["rot_up"] = True
-                if event.key == pygame.K_s: keys["rot_down"] = True
-                if event.key == pygame.K_q: keys["rot_left"] = True
-                if event.key == pygame.K_e: keys["rot_right"] = True
-                if event.key == pygame.K_z: keys["scale_in"] = True
-                if event.key == pygame.K_x: keys["scale_out"] = True
+Realism: Weapons, physics, and human emotions feel grounded, but dream manipulation introduces fantastical abilities.
 
-            if event.type == pygame.KEYUP:
-                if event.key == pygame.K_a: keys["left"] = False
-                if event.key == pygame.K_d: keys["right"] = False
-                if event.key == pygame.K_w: keys["rot_up"] = False
-                if event.key == pygame.K_s: keys["rot_down"] = False
-                if event.key == pygame.K_q: keys["rot_left"] = False
-                if event.key == pygame.K_e: keys["rot_right"] = False
-                if event.key == pygame.K_z: keys["scale_in"] = False
-                if event.key == pygame.K_x: keys["scale_out"] = False
+2. Characters (25 points)
 
-        # Apply transformations smoothly
-        if keys["left"]: glTranslatef(-0.05, 0, 0)
-        if keys["right"]: glTranslatef(0.05, 0, 0)
-        if keys["rot_up"]: glRotatef(2, 1, 0, 0)
-        if keys["rot_down"]: glRotatef(-2, 1, 0, 0)
-        if keys["rot_left"]: glRotatef(2, 0, 1, 0)
-        if keys["rot_right"]: glRotatef(-2, 0, 1, 0)
-        if keys["scale_in"]: glScalef(0.99, 0.99, 0.99)
-        if keys["scale_out"]: glScalef(1.01, 1.01, 1.01)
+Hero / Protagonist: Dom Cobb – skilled extractor, seeking redemption.
 
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
-        draw_diamond()
-        pygame.display.flip()
-        clock.tick(60)
+Shadow (Antagonist): Mal (Cobb’s projection of his wife), representing guilt and sabotage.
 
-    pygame.quit()
+Mentor: Miles (Cobb’s father-in-law, provides wisdom and guidance).
 
-if __name__ == "__main__":
-    main()
+Ally: Arthur (planner and strategist), Ariadne (architect of dreams), Eames (forger/shapeshifter), Yusuf (chemist).
+
+Guardian: Fischer’s subconscious projections (forces that resist intrusion).
+
+Trickster: Eames, with his humor and impersonation abilities.
+
+Herald: Saito, who presents Cobb with the chance to clear his record.
+
+Transformational Characters:
+
+Fischer – from resistant to accepting the implanted idea.
+
+Cobb – from guilt-driven to accepting reality and moving on.
+
+Mistaken Characters: Mal – appears real but is only a projection of Cobb’s guilt.
+
+Exaggerated Characters: Projections – exaggerated hostile enemies of the subconscious.
+
+Supporting Characters: Security projections, dream civilians, Cobb’s children.
